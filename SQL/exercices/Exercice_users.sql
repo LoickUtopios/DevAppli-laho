@@ -1,3 +1,6 @@
+CREATE DATABASE exercices; 
+USE exercices;
+
 DROP TABLE IF EXISTS users;
 
 CREATE TABLE users (
@@ -55,6 +58,8 @@ VALUES
 ALTER TABLE users
 ADD COLUMN age INT,
 ADD COLUMN salary INT NOT NULL DEFAULT 0;
+
+SET SQL_SAFE_UPDATES = 0; 
 
 UPDATE users
 SET age = TIMESTAMPDIFF(YEAR, birth_date, CURDATE());
