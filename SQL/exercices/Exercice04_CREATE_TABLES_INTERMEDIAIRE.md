@@ -1,6 +1,6 @@
 ### Exercice: Création de tables
 
-**Instructions :** Vous utiliserez les 
+**Instructions :**  
 
 1. Créez une base de données nommée `music_stream.
 
