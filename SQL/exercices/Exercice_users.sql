@@ -57,7 +57,7 @@ ADD COLUMN age INT,
 ADD COLUMN salary INT NOT NULL DEFAULT 0;
 
 UPDATE users
-SET age = EXTRACT(YEAR FROM AGE(CURRENT_DATE, birth_date));
+SET age = TIMESTAMPDIFF(YEAR, birth_date, CURDATE());
 
 UPDATE users
-SET salary = FLOOR(2000 + RANDOM() * (3500 - 2000));
+SET salary = FLOOR(2000 + RAND() * (3500 - 2000));
