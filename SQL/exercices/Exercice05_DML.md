@@ -33,7 +33,7 @@ Effectuez les opérations suivantes :
 
 1. Ajouter un service : **"Informatique"**
 2. Ajouter un service : **"Ressources Humaines"**, créé le **2024-01-01**
-3. Ajouter un service : **"Marketing"** via une requête `SELECT`
+3. Ajouter un service : **"Marketing"**
 
 ### b) Mises à jour
 
