@@ -1,3 +1,5 @@
+USE demo1;
+
 INSERT INTO salarie (nom, prenom, age, salaire, service_id)
 VALUES
 	("Jean", "Dupont", 30, 1400, 1),
@@ -32,6 +34,31 @@ WHERE salaire > 2000 AND age > 20;
 SELECT *
 FROM salarie
 WHERE salaire > 3000 OR ( age > 30 AND NOT service_id = 1); 
+
+-- Nous pouvons fournir une plage de valeur dans notre filtre WHERE
+-- Pour rechercher des termes spécifiques, nous utilisons le mot-clé insert
+SELECT *
+FROM salarie
+WHERE nom IN ('Joe', 'Jasquier', 'Jean');
+
+SELECT *
+FROM salarie
+WHERE age NOT IN (20, 25, 35);
+
+-- Pour rechercher un élement qui fait partie d'une plage de valeur, nous utilisont BETWEEN..AND
+SELECT *
+FROM salarie
+WHERE salaire BETWEEN 1500 AND 2500; -- Les valeurs données sont incluses
+
+SELECT *
+FROM salarie
+WHERE age NOT BETWEEN 20 AND 30; 
+
+
+
+
+
+
 
 
 
