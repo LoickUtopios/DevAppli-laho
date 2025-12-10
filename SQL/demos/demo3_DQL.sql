@@ -54,10 +54,22 @@ SELECT *
 FROM salarie
 WHERE age NOT BETWEEN 20 AND 30; 
 
+-- Le distinct permet de récupérer les élements sans afficher de doublon
+SELECT DISTINCT age 
+FROM salarie;
 
+-- Le LIKE permet d'effectuer une recherche sur une partie d'une chaine de caractere
+SELECT * 
+FROM salarie
+WHERE prenom LIKE 'J%';
 
+SELECT * 
+FROM salarie
+WHERE prenom LIKE 'J____';
 
-
+SELECT * 
+FROM salarie
+WHERE prenom LIKE '%g%';
 
 
 
