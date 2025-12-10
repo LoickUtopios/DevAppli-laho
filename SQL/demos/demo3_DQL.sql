@@ -122,6 +122,15 @@ FROM salarie
 GROUP BY service_id
 HAVING AVG(age) > 30; 
 
+-- L'ordre de la structure d'une requete SELECT
+SELECT 
+FROM 
+WHERE
+GROUP BY 
+HAVING
+ORDER BY
+LIMIT
+OFFSET
 
 
 
