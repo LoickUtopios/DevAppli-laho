@@ -61,7 +61,7 @@ FROM salarie;
 -- Le LIKE permet d'effectuer une recherche sur une partie d'une chaine de caractere
 SELECT * 
 FROM salarie
-WHERE prenom LIKE 'J%'; git pull 
+WHERE prenom LIKE 'J%'; 
 
 SELECT * 
 FROM salarie
@@ -71,6 +71,56 @@ SELECT *
 FROM salarie
 WHERE prenom LIKE '%g%';
 
+-- ORDER BY 
+-- Permet d'ordonner le jeu de résultat par rapport à une ou plusieurs colonnes
+-- de manière croisssante (ASC) ou décroissante (DESC)
+-- Par défaut: ASC, pas besoin de le préciser
+SELECT *
+FROM salarie
+ORDER BY prenom; 
+
+SELECT *
+FROM salarie
+ORDER BY nom DESC; 
+
+SELECT *
+FROM salarie
+ORDER BY service_id, prenom; 
+
+-- LIMIT 
+-- Permet de limiter le nombre de résultats obtenue
+SELECT prenom, salaire
+FROM salarie
+ORDER BY salaire DESC
+LIMIT 3; 
+
+-- OFFSET permet de décaler le jeu de résultats que l'on récupère
+SELECT prenom, salaire
+FROM salarie
+ORDER BY salaire DESC
+LIMIT 3
+OFFSET 3; 
+
+
+-- Fonction d'aggrégation et GROUP BY
+-- Ici, nous récupérons le salaire maximum avec MAX() 
+SELECT MAX(salaire) AS salaire_maximum
+FROM salarie; 
+
+-- ROUND permet d'arrondir une valeur et AVG de calculer la valeur moyenne de la colonne spécifié
+SELECT ROUND(AVG(salaire)) AS salaire_moyen
+FROM salarie;
+
+-- Le GROUP BY va permettre de regrouper les salaire moyen par service_id.
+SELECT AVG(salaire) AS salaire_moyen, service_id
+FROM salarie
+GROUP BY service_id; 
+
+-- Le HAVING permet d'ajouter une condition à chaque groupe réalisé par le GROUP BY
+SELECT AVG(age) AS age_moyen, service_id
+FROM salarie
+GROUP BY service_id
+HAVING AVG(age) > 30; 
 
 
 
