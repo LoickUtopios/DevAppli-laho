@@ -61,7 +61,7 @@ FROM salarie;
 -- Le LIKE permet d'effectuer une recherche sur une partie d'une chaine de caractere
 SELECT * 
 FROM salarie
-WHERE prenom LIKE 'J%';
+WHERE prenom LIKE 'J%'; git pull 
 
 SELECT * 
 FROM salarie
